@@ -9,10 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.40.0",
     "eslint-config-next": "13.4.1",
     "next": "13.4.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "postcss": "^8.4.23",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^8.3.2",
+    "prettier": "^2.8.8"
   }
 }

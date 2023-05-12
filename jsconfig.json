@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@styles/* @logos/* @components/* @common/* @layout/*": ["./src/*"]
-    }
+    "paths": {}
   }
 }
