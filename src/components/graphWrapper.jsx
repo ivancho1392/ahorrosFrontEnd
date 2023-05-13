@@ -8,7 +8,7 @@ const GraphWrapper = ({ showGraph }) => {
 
   return (
     <div className="graph-container">
-      <Graph />
+      <Graph data={['10', '20', '5', '10', '10', '8']} />
     </div>
   );
 };

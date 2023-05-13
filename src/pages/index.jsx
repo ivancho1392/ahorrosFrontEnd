@@ -4,11 +4,19 @@ import TableWrapperMov from '../components/tMovementWrapper';
 import FormAddMoveWrapper from '../components/formAddMoveWrapper';
 import GraphWrapper from '../components/graphWrapper';
 
+function Boton(props) {
+  return (
+    <div className={props.className}>
+      <button onClick={props.onClick}>{props.texto}</button>
+    </div>
+  );
+}   
+
 const LoginPage = () => {
   const [showTBudget, setShowTBudget] = useState(false);
   const [showTMovement, setShowTMovement] = useState(false);
   const [showAMovement, setShowAMovement] = useState(false);
-  const [showGraph, setShowGraph] = useState(true);
+  const [showGraph, setShowGraph] = useState(false);
 
   const handledTBudgetToggle = () => {
     setShowAMovement(false);
@@ -42,18 +50,10 @@ const LoginPage = () => {
         <FormAddMoveWrapper showForm={showAMovement} />
       </main>
       <div id="sidebar">
-        <div className="buttonBudget">
-          <button onClick={handledTBudgetToggle}>{'BUDGET'}</button>
-        </div>
-        <div className="buttonMovement">
-          <button onClick={handledTMovementToggle}>{'MOVEMENTS'}</button>
-        </div>
-        <div className="buttonAMovement">
-          <button onClick={handledAMovementToggle}>{'ADD NEW MOVEMENT'}</button>
-        </div>
-        <div className="buttonGraph">
-          <button onClick={handledGraphToggle}>{'GRAPH'}</button>
-        </div>
+        <Boton className="buttonBudget" onClick={handledTBudgetToggle} texto="BUDGET" />
+        <Boton className="buttonMovement" onClick={handledTMovementToggle} texto="MOVEMENTS" />
+        <Boton className="buttonAMovement" onClick={handledAMovementToggle} texto="ADD NEW MOVEMENT" />
+        <Boton className="buttonGraph" onClick={handledGraphToggle} texto="GRAPH" />
       </div>
       <div id="content1">
         <GraphWrapper showGraph={showGraph} />

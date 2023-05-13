@@ -1,29 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+import React from 'react';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend, Title);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const options = {
+  scales: {
+    y: {
+      beginAtZero: true,
+    },
+  },
   plugins: {
     title: {
       display: true,
-      text: 'Budget', // Título del gráfico
+      text: 'Resument Movement', // Título del gráfico
       font: {
         size: 22,
+      },
+      legend: {
+        position: 'top',
       },
       padding: {
         top: 20,
         bottom: 0,
       },
     },
-    legend: {
-      position: 'right', // Posición de la leyenda
-    },
   },
 };
 
-const Graph = ({ data }) => {
+const GraphBar = ({ data }) => {
   const chartData = {
     labels: ['General', 'Medic', 'Pets', 'Car', 'Leisure', 'Unexpected'],
     datasets: [
@@ -37,7 +42,7 @@ const Graph = ({ data }) => {
     ],
   };
 
-  return <Pie data={chartData} options={options} />;
+  return <Bar data={chartData} options={options} />;
 };
 
-export default Graph;
+export default GraphBar;
