@@ -13,7 +13,7 @@ const options = {
   plugins: {
     title: {
       display: true,
-      text: 'Resument Movement', // Título del gráfico
+      text: 'Movement Summary', // Título del gráfico
       font: {
         size: 22,
       },
