@@ -57,7 +57,7 @@
 
 /*Styles for main container*/
 .maincontainer {
-  margin-top: 4px;
+  margin-top: 50px;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -95,6 +95,7 @@
   grid-area: sidebar;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  min-width: 250px;
 }
 
 .maincontainer #content1 {
@@ -155,7 +156,8 @@ body {
 /*Styles for buttons*/
 .buttonBudget,
 .buttonMovement,
-.buttonAMovement {
+.buttonAMovement,
+.buttonGraph {
   margin-top: 12px;
   justify-content: center;
   margin-bottom: 12px;
@@ -163,7 +165,8 @@ body {
 
 .buttonBudget button,
 .buttonMovement button,
-.buttonAMovement button {
+.buttonAMovement button,
+.buttonGraph button {
   background-color: #0a255f;
   color: white;
   padding: 12px;
@@ -179,8 +182,20 @@ body {
 }
 
 .buttonBudget button:hover,
-.buttonMovement button:hover {
+.buttonMovement button:hover,
+.buttonAMovement button:hover,
+.buttonGraph button:hover {
   transform: scale(1.1);
+}
+
+/*styles for graph*/
+.graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 /*Styles for header*/
