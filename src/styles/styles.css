@@ -4,6 +4,21 @@
   --main-padding: 5px;
 }
 
+/*Styles for body*/
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+}
+
+/*fonts*/
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+}
+
 /*Styles for header container*/
 .headerContainer{
   position: fixed;
@@ -13,9 +28,9 @@
   background-color: white;
   height: 44px;
   display: grid;
-  grid-template-columns: 0.2fr 2.2fr 1fr 1fr 0.2fr 1fr;
+  grid-template-columns: 30px 270px 1fr 30px 100px;
   grid-gap: 4px;
-  grid-template-areas: "p1 p2 p3 p3 p4 p5";
+  grid-template-areas: "p1 p2 p3 p4 p5";
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -24,7 +39,8 @@
   grid-area: p1;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
+  margin-left: 30px;
 }
 
 .headerContainer #P2{
@@ -38,7 +54,10 @@
   grid-area: p3;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
+  border-left: 1px solid rgb(212, 212, 212); 
+  border-right: 1px solid rgb(212, 212, 212); 
+  padding: 10px;
 }
 
 .headerContainer #P4{
@@ -54,6 +73,8 @@
   align-items: center;
   justify-content: left;
 }
+
+
 
 /*Styles for main container*/
 .maincontainer {
@@ -122,22 +143,6 @@
   padding-top: var(--main-padding);
 }
 
-/*Styles for body*/
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  margin: 0;
-}
-
-/*fonts*/
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-}
-
-
 /*Style for tables*/
 .table-styling {
   border-collapse: collapse;
@@ -154,19 +159,13 @@ body {
 }
 
 /*Styles for buttons*/
-.buttonBudget,
-.buttonMovement,
-.buttonAMovement,
-.buttonGraph {
+#buttons {
   margin-top: 12px;
   justify-content: center;
   margin-bottom: 12px;
 }
 
-.buttonBudget button,
-.buttonMovement button,
-.buttonAMovement button,
-.buttonGraph button {
+#buttons button {
   background-color: #0a255f;
   color: white;
   padding: 12px;
@@ -181,10 +180,7 @@ body {
   font-weight: 400;
 }
 
-.buttonBudget button:hover,
-.buttonMovement button:hover,
-.buttonAMovement button:hover,
-.buttonGraph button:hover {
+#buttons button:hover {
   transform: scale(1.1);
 }
 
@@ -223,41 +219,25 @@ body {
   text-decoration: none;
 }
 
-.headerContainer .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-  text-transform: uppercase;
-  font-size: 16px;
-  flex-grow: 0.3;
-}
-
-.headerContainer .navBar {
+.navBar {
   color: #3d3d3d;
   text-decoration: none;
-  padding-right: 20px;
+  padding: 0px 20px 0px 20px;
 }
 
-.headerContainer .navBar:hover {
+.threelines, .user, .account{
+  cursor: pointer;
+}
+
+.navBar:hover {
   background-color: #f2f2f2;
   border-radius: 4px;
 }
 
-.headerContainer .icon {
-  display: flex;
-  align-items: center;
-}
-
-.headerContainer .icon:hover {
-  background-color: #f2f2f2;
-  border-radius: 4px;
-}
 .headerContainer .account {
-  margin-right: 40px;
   font-size: 16px;
   font-weight: bold;
   color: #0a255f;
-  margin-left: 20px;
   text-decoration: none;
 }
 
@@ -298,7 +278,7 @@ textarea {
 input[type="submit"] {
   margin-top: 18px;
   background-color: #0a255f;
-  color: white;
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -309,14 +289,48 @@ input[type="submit"]:hover {
   background-color: #081c46;
 }
 
+/*styles for myaccount*/
 
+.myaccount-wrapper{
+  display: flex;
+  justify-content: right;
+}
+
+.myaccount_container{
+  padding: 8px;
+  margin-top: 22px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  z-index: 99999;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#login, #signup {
+  padding: 8px 8px 8px 8px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none;
+  color: #0a255f;
+  margin-top: 4px;
+}
+
+.userblue, .signupblue {
+  z-index: 99999;
+  margin-right: 8px;
+}
 
 @media (max-width: 832px) {
   .headerContainer{
     display: grid;
-    grid-template-columns: 0.2fr 1fr 1fr 0.1fr 0.1fr 1.2fr;
-    grid-gap: 4px;
-    grid-template-areas: "p1 p2 p2 p4 p4 p5";
+    grid-template-columns: 30px 1fr 30px 100px;
+    grid-template-areas: "p1 p2 p4 p5";
   }
   
   .headerContainer #P1{
@@ -325,7 +339,6 @@ input[type="submit"]:hover {
   
   .headerContainer #P2{
     grid-area: p2;
-    justify-content: left;
   }
 
   .headerContainer #P3{
@@ -339,32 +352,13 @@ input[type="submit"]:hover {
   .headerContainer #P5{
     grid-area: p5;
   }
-
-  .header .nav {
-    display: none;
-  }
-  
-  .header .logo {
-    margin-left: 10px;
-  }
-  
-  .header .icon {
-    font-size: 5px;
-    margin-right: 10px;
-  }
-  
-  .header .icon {
-    margin-right: 20px;
-  }
-
 }
 
 @media only screen and (max-width: 520px){
   .headerContainer{
     display: grid;
-    grid-template-columns: 0.2fr 2fr 0.2fr;
-    grid-gap: 4px;
-    grid-template-areas: "p1 p2 p3";
+    grid-template-columns: 30px 1fr 30px 1px;
+    grid-template-areas: "p1 p2 p3 p5";
   }
   
   .headerContainer #P1{
@@ -385,20 +379,28 @@ input[type="submit"]:hover {
   }
 
   .headerContainer #P5{
-    display: none;
+    grid-area: p5;
   }
 
-  .header .nav {
-    display: none;
+  .myaccount-wrapper{
+    display: flex;
+    justify-content: right;
+    margin-left: 0px;
   }
   
-  .header .logo {
-    display: none;
+  .myaccount_container{
+    padding: 8px;
+    padding-right: 70px;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 150px;
+    height: 300px;  
+    z-index: 99999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   }
-  
-  .header .icon {
-    margin-right: 20px;
-  }
+
   .maincontainer {
     margin-top: 50px;
     display: grid;

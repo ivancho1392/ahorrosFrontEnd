@@ -18,7 +18,6 @@ const FormAddMove = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Crea un nuevo objeto con los valores ingresados por el usuario
     const newData = {
       "general": parseInt(formData.general),
       "medico": parseInt(formData.medico),

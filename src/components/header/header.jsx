@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import MyaccountWrapper from '../myaccount/myaccountWrapper';
 
 const Header = () => {
+  const [showMyaccount, setShowMyaccount] = useState(true);
+
+  const handledMyaccount = () => {
+    setShowMyaccount((prev) => !prev);
+  };
+
   return (
     <header className="headerContainer">
       <div id="P1">
-        <Image src="/threelines.png" className='threelines' alt="" width={20} height={20} quality={100} />
+        <Image src="/threelines.png" className="threelines" alt="" width={20} height={20} quality={100} />
       </div>
       <div id="P2">
         <a href="/" className="psp">
@@ -24,12 +31,11 @@ const Header = () => {
         </a>
       </div>
       <div id="P4">
-        <Image src="/usuario.jpg" alt="" width={30} height={30} quality={100} />
+        <Image src="/usuario.jpg" className="user" alt="" width={30} height={30} quality={100} onClick={handledMyaccount} />
       </div>
       <div id="P5">
-        <a href="/" className="account">
-          My Account
-        </a>
+        <a className="account" onClick={handledMyaccount}>My Account</a>
+        <MyaccountWrapper showMyaccount={showMyaccount} />
       </div>
     </header>
   );

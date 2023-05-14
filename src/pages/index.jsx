@@ -6,7 +6,7 @@ import GraphWrapper from '../components/graphWrapper';
 
 function Boton(props) {
   return (
-    <div className={props.className}>
+    <div id="buttons" className={props.className} >
       <button onClick={props.onClick}>{props.texto}</button>
     </div>
   );
