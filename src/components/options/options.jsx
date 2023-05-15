@@ -5,15 +5,15 @@ import Image from 'next/image';
 const Options = () => {
   return (
     <div className='options_container'>
-      <Link id="login" href="/config"><Image src="/dash.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Dashboard</Link>
+      <Link id="login" href="/"><Image src="/dash.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Dashboard</Link>
       <br />
-      <Link id="login" href="/LogIn"><Image src="/calendar.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Calendar</Link>
+      <Link id="login" href="/"><Image src="/calendar.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Calendar</Link>
       <br />
-      <Link id="login" href="/signUp"><Image src="/report.png" className="signupblue" alt="" width={25} height={30} quality={100}/>Reports</Link>
+      <Link id="login" href="/"><Image src="/report.png" className="signupblue" alt="" width={25} height={30} quality={100}/>Reports</Link>
       <br />
-      <Link id="login" href="/signUp"><Image src="/goal.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Goals</Link>
+      <Link id="login" href="/"><Image src="/goal.png" className="signupblue" alt="" width={30} height={30} quality={100}/>Goals</Link>
       <br />
-      <Link id="login" href="/notification"><Image src="/new.png" className="signupblue" alt="" width={30} height={30} quality={100}/>New Budget</Link>
+      <Link id="login" href="/"><Image src="/new.png" className="signupblue" alt="" width={30} height={30} quality={100}/>New Budget</Link>
       <br />
     </div>
   );

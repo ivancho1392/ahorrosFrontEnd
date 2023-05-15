@@ -29,13 +29,13 @@ const Header = () => {
         </a>
       </div>
       <div id="P3">
-        <a href="/History" className="navBar font-body">
+        <a href="/" className="navBar font-body">
           History
         </a>
-        <a href="/Your Progress" className="navBar font-body">
+        <a href="/" className="navBar font-body">
           Progress
         </a>
-        <a href="/Your Goals" className="navBar font-body">
+        <a href="/" className="navBar font-body">
           Goals
         </a>
       </div>

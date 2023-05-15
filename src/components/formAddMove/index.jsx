@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import GraphBar from './graphBars';
-import sendNewMove from '../services/postMov';
+import GraphBar from '../graphBars';
+import sendNewMove from '../../services/postMov';
 
 const FormAddMove = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ const FormAddMove = () => {
     });
   const [changeData, setChangeData] = useState(Object.values(formData));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newData = {
       "general": parseInt(formData.general),
@@ -32,10 +32,12 @@ const FormAddMove = () => {
       "tipo": formData.tipo,
       "fecha": formData.fecha
     };
-    
     setChangeData(Object.values(newData));
-    console.log(newDatatoSend);
-    sendNewMove(newDatatoSend);
+    try {
+      await sendNewMove(newDatatoSend);  
+    } catch (error) {
+      alert(`Error ${error}`);
+    } 
   };
 
   return (
