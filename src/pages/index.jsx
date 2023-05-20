@@ -1,17 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import TableWrapper from '../components/tBudgetWrapper';
 import TableWrapperMov from '../components/tMovementWrapper';
 import FormAddMoveWrapper from '../components/formAddMoveWrapper';
 import GraphWrapper from '../components/graphWrapper';
 import DelMoveWrapper from '../components/deleteMove/deleteMoveWrapper';
-
-function Boton(props) {
-  return (
-    <div id="buttons" className={props.className} >
-      <button onClick={props.onClick}>{props.texto}</button>
-    </div>
-  );
-}   
+import { Button } from '../components/button';
+import { TotalSaved } from '../components/totalSaved';
+import styles from './index.module.css'
 
 const LoginPage = () => {
   const [showTBudget, setShowTBudget] = useState(false);
@@ -48,19 +43,39 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="maincontainer">
-      <nav className="total">TOTAL SAVED: $630</nav>
+    <div className={styles.maincontainer}>
+       <TotalSaved  
+       className="total"
+       valor="630"/>
+
       <main>
         <DelMoveWrapper showDelMove={showDelMove} />
         <TableWrapper showTable={showTBudget} />
         <TableWrapperMov showTable={showTMovement} />
         <FormAddMoveWrapper showForm={showAMovement} />
       </main>
+
       <div id="sidebar">
-        <Boton className="buttonBudget" onClick={handledTBudgetToggle} texto="SEE ALL MOVEMENTS" />
-        <Boton className="buttonMovement" onClick={handledTMovementToggle} texto="SEARCH MOVEMENT BY ID" />
-        <Boton className="buttonAMovement" onClick={handledAMovementToggle} texto="ADD NEW MOVEMENT" />
-        <Boton className="buttonGraph" onClick={handledDelMoveToggle} texto="DELETE MOVEMENT" />
+        <Button 
+        className="buttonBudget" 
+        onClick={handledTBudgetToggle} 
+        texto="SEE ALL MOVEMENTS" />
+
+        <Button 
+        className="buttonMovement" 
+        onClick={handledTMovementToggle} 
+        texto="SEARCH MOVEMENT BY ID" />
+
+        <Button 
+        className="buttonAMovement" 
+        onClick={handledAMovementToggle} 
+        texto="ADD NEW MOVEMENT" />
+
+        <Button 
+        className="buttonGraph" 
+        onClick={handledDelMoveToggle} 
+        texto="DELETE MOVEMENT" />
+
       </div>
       <div id="content1"></div>
       <div id="content2"></div>

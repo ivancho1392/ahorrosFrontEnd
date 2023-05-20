@@ -1,0 +1,36 @@
+.options_container {
+  padding: 8px;
+  margin-top: 22px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  z-index: 99999;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#login {
+  padding: 8px 8px 8px 8px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none;
+  color: #0a255f;
+  margin-top: 4px;
+  z-index: 0;
+}
+
+#login:hover,
+#signup:hover {
+  border: 1px solid #4e4d4d9f;
+}
+
+.signupblue {
+  z-index: 99999;
+  margin-right: 8px;
+}
+

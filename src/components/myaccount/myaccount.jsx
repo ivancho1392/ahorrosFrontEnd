@@ -1,16 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './index.module.css';
 
 const Myaccount = () => {
   return (
-    <div className='myaccount_container'>
-      <Link id="config" href="/"><Image src="/config.png" className="config" alt="" width={30} height={30} quality={100}/></Link>
-      <Link id="login" href="/"><Image src="/userblue.png" className="userblue" alt="" width={30} height={30} quality={100}/>LogIn </Link>
+    <div className={styles.myaccount_container}>
+      <Link id={styles.config} href="/"><Image src="/config.png" className={styles.config} alt="" width={30} height={30} quality={100}/></Link>
+      <Link id={styles.login} href="/logIn"><Image src="/userblue.png" className={styles.userblue} alt="" width={30} height={30} quality={100}/>LogIn </Link>
       <br />
-      <Link id="signup" href="/"><Image src="/signup.png" className="signupblue" alt="" width={30} height={30} quality={100}/>SignUp</Link>
+      <Link id={styles.signup} href="./signUp"><Image src="/signup.png" className={styles.signupblue} alt="" width={30} height={30} quality={100}/>SignUp</Link>
       <br />
-      <Link id="notification" href="/"><Image src="/notification.png" className="notification" alt="" width={30} height={30} quality={100}/>Notifications</Link>
+      <Link id={styles.notification} href="/"><Image src="/notification.png" className={styles.notification} alt="" width={30} height={30} quality={100}/>Notifications</Link>
       <br />
     </div>
   );

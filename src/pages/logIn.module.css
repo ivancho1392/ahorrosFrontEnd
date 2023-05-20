@@ -1,0 +1,72 @@
+.container_sign_in{
+    background-image: url(https://images.pexels.com/photos/4386324/pexels-photo-4386324.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 5% 5% 5% 5%;
+    border-radius: 10px;
+    z-index: 899;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #3d3d3d;
+    text-align: center;
+  }
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .content{
+    position: relative;
+    width: 240px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);  
+    display:grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label {
+    display: flex;
+    margin-bottom: 4px;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+  
+  #input {
+    border-radius: 4px;
+    height: 24px;
+    border: 1px solid #cccccc9f;
+  }
+  
+  #input:hover {
+    border: 1px solid #4e4d4d9f;
+  }
+  
+.boton_signup {
+    margin-top: 18px;
+    background-color: #0a255f;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.boton_signup:hover {
+    background-color: #081c46;
+  }

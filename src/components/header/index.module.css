@@ -1,0 +1,165 @@
+/*Styles for header*/
+.headerContainer {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 44px;
+  display: grid;
+  grid-template-columns: 30px 270px 1fr 30px 100px;
+  grid-gap: 4px;
+  grid-template-areas: 'p1 p2 p3 p4 p5';
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.headerContainer #P1 {
+  grid-area: p1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.headerContainer #P2 {
+  grid-area: p2;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.headerContainer #P3 {
+  grid-area: p3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgb(212, 212, 212);
+  border-right: 1px solid rgb(212, 212, 212);
+  padding: 10px;
+}
+
+.headerContainer #P4 {
+  grid-area: p4;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.headerContainer #P5 {
+  grid-area: p5;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #3d3d3d;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.headerContainer .psp {
+  z-index: 999999;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a255f;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navBar {
+  color: #3d3d3d;
+  text-decoration: none;
+  padding: 0px 20px 0px 20px;
+}
+
+.threelines,
+.user,
+.account {
+  cursor: pointer;
+}
+
+.navBar:hover {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.headerContainer .account {
+  z-index: 999999;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0a255f;
+  text-decoration: none;
+}
+
+@media (max-width: 832px) {
+
+
+  .headerContainer{
+    display: grid;
+    grid-template-columns: 30px 1fr 30px 100px;
+    grid-template-areas: "p1 p2 p4 p5";
+  }
+  
+  .headerContainer #P1{
+    grid-area: p1;
+  }
+  
+  .headerContainer #P2{
+    grid-area: p2;
+  }
+
+  .headerContainer #P3{
+    display: none;
+  }
+
+  .headerContainer #P4{
+    grid-area: p4;
+  }
+
+  .headerContainer #P5{
+    grid-area: p5;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .headerContainer{
+    display: grid;
+    grid-template-columns: 30px 1fr 30px 1px;
+    grid-template-areas: "p1 p2 p3 p5";
+  }
+  
+  .headerContainer #P1{
+    grid-area: p1;
+  }
+  
+  .headerContainer #P2{
+    grid-area: p2;
+    justify-content: center;
+  }
+
+  .headerContainer #P3{
+    display: none;
+  }
+
+  .headerContainer #P4{
+    grid-area: p3;
+  }
+
+  .headerContainer #P5{
+    grid-area: p5;
+  }
+  
+}

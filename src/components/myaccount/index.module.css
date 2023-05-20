@@ -1,0 +1,96 @@
+/*styles for myaccount*/
+
+#login, #signup {
+    padding: 8px 8px 8px 8px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: #0a255f;
+    margin-top: 4px;
+    z-index: 0;
+  }
+  
+  .moves_containers{
+    width: 300px;
+  }
+  
+  #moveButtons {
+    padding: 8px 8px 8px 8px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: #0a255f;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+  
+  #login:hover, #signup:hover, #moveButtons:hover {
+    border: 1px solid #4e4d4d9f;
+  }
+  
+  .userblue, .signupblue {
+    z-index: 99999;
+    margin-right: 8px;
+  }
+  
+  .notification {
+    display: flex;
+    z-index: 99999;
+    margin-right: 8px;
+    align-self: flex-end;
+  }
+  
+  #notification {
+    padding: 8px 8px 8px 8px;
+    margin-top: 150px;
+    border-top: 1px dotted #757575;
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: #0a255f;
+  }
+  
+  #config {
+    margin: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: end;
+  }
+
+
+.myaccount_wrapper{
+    display: flex;
+    justify-content: right;
+  }
+  
+  .myaccount_container{
+    padding: 8px;
+    margin-top: 22px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    z-index: 999999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  @media only screen and (max-width: 520px){
+    .myaccount_container{
+      padding: 8px;
+      padding-right: 70px;
+      margin-top: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      width: 300px;
+      height: 400px;  
+      z-index: 99999;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Myaccount from './myaccount';
+import styles from './index.module.css';
 
 const MyaccountWrapper = ({ showMyaccount }) => {
   if (!showMyaccount) {
@@ -7,7 +8,7 @@ const MyaccountWrapper = ({ showMyaccount }) => {
   }
 
   return (
-    <div className='myaccount-wrapper'>
+    <div className={styles.myaccount_wrapper}>
         <Myaccount />
     </div>
   );

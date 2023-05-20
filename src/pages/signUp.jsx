@@ -1,36 +1,34 @@
 import React from 'react';
-import Image from 'next/image';
+import styles from './signUp.module.css'
 
 const SignupPage = () => {
-
   return (
     <div>
-      <div className="logoSoinver" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px', marginTop: '32px' }}>
-        <Image src="/logo-soinver.png" alt="" width={192} height={192} quality={90} style={{ height: 'auto' }} />
-      </div>
-      <div className="form-container">
-        <div className="titulo" style={{ fontFamily: 'Arial, sans-serif' }}>
-          <h1>Create a new account</h1>
+      <div className={styles.container_sign_up}>
+      <div className={styles.overlay}></div>
+        <div>
+          
+          <form className={styles.content}>
+          <h2>Create a new account</h2>
+            <label className={styles.label} htmlFor="email">
+              Your email:
+            </label>
+            <input type="text" id="email" name="email" placeholder="name@email.com" />
+            <br />
+            <label className={styles.label} htmlFor="password">
+              Password:
+            </label>
+            <input type="password" id="password" name="password" placeholder="*********" />
+            <br />
+            <label className={styles.label} htmlFor="password" >
+              Repet Password:
+            </label>
+            <input type="password" id="password" name="password" placeholder="*********"  />
+            <br />
+            <input className={styles.boton_signup} type="submit" value="Sign up"  />
+          </form>
         </div>
-        <form>
-          <label htmlFor="email" style={{ fontFamily: 'Arial, sans-serif' }}>
-            Your email:
-          </label>
-          <input type="text" id="email" name="email" placeholder="name@email.com" style={{ fontFamily: 'Arial, sans-serif' }} />
-          <br />
-          <label htmlFor="password" style={{ fontFamily: 'Arial, sans-serif' }}>
-            Password:
-          </label>
-          <input type="password" id="password" name="password" placeholder="*********" style={{ fontFamily: 'Arial, sans-serif' }} />
-          <br />
-          <label htmlFor="password" style={{ fontFamily: 'Arial, sans-serif' }}>
-            Repet Password:
-          </label>
-          <input type="password" id="password" name="password" placeholder="*********" style={{ fontFamily: 'Arial, sans-serif' }} />
-          <br />
-          <input className="boton-login" type="submit" value="Sign up" style={{ fontFamily: 'Arial, sans-serif' }} />
-        </form>
-      </div>
+        </div>
     </div>
   );
 };

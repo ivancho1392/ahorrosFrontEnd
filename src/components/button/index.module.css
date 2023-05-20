@@ -1,0 +1,31 @@
+/*Styles for buttons*/
+#buttons {
+    margin-top: 12px;
+    justify-content: left;
+    margin-bottom: 12px;
+  }
+  
+  #buttons button {
+    padding: 8px 8px 8px 8px;
+    background-color: white;
+    color: #0a255f;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+    height: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+  }
+  
+  #buttons button:hover {
+    transform: scale(1.1);
+    border: 1px solid #4e4d4d9f;
+  }
+
